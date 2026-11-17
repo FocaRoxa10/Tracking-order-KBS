@@ -1,0 +1,149 @@
+/* KLEE B SHOP (KBS) - Official Modern Pyro Obsidian Theme */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@600;700;800&display=swap');
+
+:root {
+  --bg-deep: #080507;
+  --bg-surface: #100a0e;
+  --bg-surface-elevated: #180f15;
+  --klee-crimson: #e11d48;
+  --klee-crimson-bright: #ff2a55;
+  --klee-crimson-dark: #9f1239;
+  --klee-gold: #f59e0b;
+  --klee-amber: #fbbf24;
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-klee: rgba(225, 29, 72, 0.25);
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: var(--bg-deep);
+  color: #f1f5f9;
+  background-image: 
+    radial-gradient(ellipse 90% 45% at 50% -15%, rgba(225, 29, 72, 0.18), transparent 70%),
+    radial-gradient(circle at 85% 30%, rgba(245, 158, 11, 0.08), transparent 45%),
+    radial-gradient(circle at 10% 75%, rgba(225, 29, 72, 0.06), transparent 50%);
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+.font-heading {
+  font-family: 'Space Grotesk', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+/* Klee B Shop Card */
+.kbs-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: 1.25rem;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.7);
+  transition: all 0.2s ease;
+}
+
+.kbs-card:hover {
+  border-color: rgba(225, 29, 72, 0.35);
+}
+
+.kbs-card-glow {
+  border: 1px solid rgba(225, 29, 72, 0.4);
+  box-shadow: 0 10px 35px -10px rgba(225, 29, 72, 0.25);
+}
+
+/* Klee Obsidian Inputs */
+.kbs-input {
+  background: #0b0709;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #f8fafc;
+  transition: all 0.2s ease;
+}
+
+.kbs-input:focus {
+  outline: none;
+  border-color: var(--klee-crimson);
+  background: #120b0f;
+  box-shadow: 0 0 0 3px rgba(225, 29, 72, 0.2);
+}
+
+/* Klee Crimson Fire Button */
+.btn-klee {
+  background: linear-gradient(135deg, #ff3355 0%, #e11d48 55%, #be123c 100%);
+  color: #ffffff;
+  font-weight: 700;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 16px rgba(225, 29, 72, 0.35);
+}
+
+.btn-klee:hover {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 22px rgba(225, 29, 72, 0.5);
+}
+
+.btn-klee:active {
+  transform: translateY(0);
+}
+
+/* Package Option Selector Card */
+.kbs-pkg-card {
+  background: #0d080b;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1rem;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.kbs-pkg-card:hover {
+  background: #140c11;
+  border-color: rgba(225, 29, 72, 0.45);
+  transform: translateY(-1px);
+}
+
+.kbs-pkg-card.active {
+  background: linear-gradient(145deg, rgba(225, 29, 72, 0.18) 0%, #120a0f 100%);
+  border-color: var(--klee-crimson-bright);
+  box-shadow: 0 0 0 1px var(--klee-crimson), 0 4px 20px rgba(225, 29, 72, 0.25);
+}
+
+/* Pulsing In-Game Indicator */
+.pulse-ingame {
+  animation: pulse-danger-anim 2s infinite;
+}
+
+@keyframes pulse-danger-anim {
+  0% { box-shadow: 0 0 0 0 rgba(225, 29, 72, 0.7); }
+  70% { box-shadow: 0 0 0 12px rgba(225, 29, 72, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(225, 29, 72, 0); }
+}
+
+/* Sparkle Floating Animation */
+@keyframes spark {
+  0%, 100% { transform: translateY(0) scale(1); opacity: 0.9; }
+  50% { transform: translateY(-4px) scale(1.08); opacity: 1; }
+}
+
+.animate-spark {
+  animation: spark 3s ease-in-out infinite;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #080507;
+}
+::-webkit-scrollbar-thumb {
+  background: #231219;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3b1725;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  background: rgba(4, 2, 3, 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
